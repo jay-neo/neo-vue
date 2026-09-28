@@ -1,0 +1,33 @@
+/* @import './base.css'; */
+@import 'tailwindcss';
+
+/* Remove the up/down spinner arrows from number inputs (e.g. the Index field) */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type='number'] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+@theme {
+  /* Near-black surfaces, from page background to raised panels */
+  --color-ink-950: #000000;
+  --color-ink-900: #0a0a0a;
+  --color-ink-800: #141414;
+  --color-ink-700: #1c1c1c;
+  --color-ink-600: #262626;
+  --color-ink-500: #3a3a3a;
+
+  /* Single yellow accent family used for focus states and primary actions */
+  --color-accent-300: #fde68a;
+  --color-accent-400: #fde047;
+  --color-accent-500: #eab308;
+  --color-accent-600: #ca8a04;
+
+  /* Font Family Definitions */
+  --font-sans: 'Inter', 'ui-sans-serif', 'system-ui', sans-serif;
+  --font-mono: 'JetBrains Mono', 'ui-monospace', 'SFMono-Regular', monospace;
+}
