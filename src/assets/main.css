@@ -12,6 +12,12 @@ input[type='number'] {
   appearance: textfield;
 }
 
+button {
+  cursor: pointer;
+}
+
+@apply bg-slate-950 text-white font-sans antialiased;
+
 @theme {
   /* Near-black surfaces, from page background to raised panels */
   --color-ink-950: #000000;

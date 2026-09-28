@@ -90,11 +90,15 @@ function handleSubmit() {
 </script>
 
 <template>
-  <div class="min-h-screen bg-ink-900 px-4 py-10">
+  <div class="min-h-screen bg-slate-950 px-4 py-10">
     <div class="mx-auto max-w-3xl">
       <header class="mb-8">
-        <h1 class="text-lg font-semibold text-zinc-100">SQL Config Mapper</h1>
-        <p class="mt-1 text-sm text-zinc-500">
+        <h1
+          class="bg-gradient-to-r from-amber-300 via-pink-400 to-violet-400 bg-clip-text text-2xl font-extrabold text-transparent"
+        >
+          SQL Config Mapper
+        </h1>
+        <p class="mt-1 text-sm font-medium text-slate-300">
           Define a statement, its bind parameters, and its mappings.
         </p>
       </header>
@@ -121,7 +125,7 @@ function handleSubmit() {
         </section>
 
         <section>
-          <h2 class="mb-2 text-sm font-medium text-zinc-300">Parameters</h2>
+          <h2 class="mb-2 text-sm font-bold text-sky-300">Parameters</h2>
           <ParametersTable
             v-model="parameters"
             :type-options="paramTypeOptions"
@@ -156,19 +160,19 @@ function handleSubmit() {
 
         <div
           v-if="submitAttempted && validationErrors.length"
-          class="rounded-md border border-red-400/60 bg-red-400/5 px-4 py-3 text-sm text-red-400"
+          class="rounded-xl border-2 border-rose-300 bg-rose-600 px-4 py-3 text-sm text-white"
         >
-          <p class="mb-1 font-medium">Fix the following before submitting:</p>
-          <ul class="list-inside list-disc space-y-0.5">
+          <p class="mb-1 font-bold">Fix the following before submitting:</p>
+          <ul class="list-inside list-disc space-y-0.5 font-medium">
             <li v-for="err in validationErrors" :key="err">{{ err }}</li>
           </ul>
         </div>
 
-        <div class="flex items-center justify-center">
+        <div class="flex items-center justify-center my-3">
           <button
             type="button"
             @click="handleSubmit"
-            class="rounded-md border border-accent-500 bg-accent-500/10 px-5 py-2 text-sm font-medium text-accent-400 transition-colors hover:bg-accent-500/20 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent-400/60"
+            class="rounded-xl bg-gradient-to-r from-amber-400 to-orange-500 px-8 py-3 text-sm font-bold text-slate-950 shadow-lg shadow-orange-500/30 transition hover:brightness-110"
           >
             Submit
           </button>
